@@ -1,0 +1,13 @@
+{
+  "name": "spotify-playcount-service",
+  "version": "1.0.0",
+  "description": "Simple Node.js service to fetch Spotify track play count with Playwright",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "playwright": "^1.47.0"
+  }
+}
