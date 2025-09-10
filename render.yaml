@@ -1,8 +1,6 @@
 services:
   - type: web
     name: spotify-playcount-service
-    env: node
-    buildCommand: |
-      npm install
-      npx playwright install --with-deps
-    startCommand: node server.js
+    env: docker
+    plan: free
+    autoDeploy: true
