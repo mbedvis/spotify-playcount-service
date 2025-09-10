@@ -1,15 +1,8 @@
-# Naudojam oficialų Playwright 1.55.0 image
-FROM mcr.microsoft.com/playwright:v1.55.0-focal
+# vietoje ...v1.55.0-focal
+FROM mcr.microsoft.com/playwright:v1.55.0-jammy
 
 WORKDIR /app
-
-# Tik package.json pirmiausia
 COPY package*.json ./
-
-# Įrašom dependencies (tik express, be playwright)
-RUN npm install
-
-# Kopijuojam visą kodą
+RUN npm install --omit=dev
 COPY . .
-
 CMD ["node", "server.js"]
